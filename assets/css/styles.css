@@ -7,7 +7,7 @@
 
     /*========== Colors ==========*/
     /* Change favorite color */
-    --hue-color: 224; /*Blue 224 - Green 142 - Purple 250 - Pink 340*/
+    --hue-color: 270; /*Blue 224 - Green 142 - Purple 250 - Pink 340*/
 
     /* HSL color mode */
     --first-color: hsl(var(--hue-color), 89%, 60%);
@@ -73,11 +73,11 @@
 /*========== Variables Dark theme ==========*/
 body.dark-theme{
     /* HSL color mode */
-    --first-color-second: hsl(var(--hue-color), 30%, 8%);
+    --first-color-second: hsl(var(--hue-color), 30%, 6%);
     --title-color: hsl(var(--hue-color), 8%, 95%);
     --text-color: hsl(var(--hue-color), 8%, 75%);
     --input-color: hsl(var(--hue-color), 29%, 16%);
-    --body-color: hsl(var(--hue-color), 28%, 12%);
+    --body-color: hsl(var(--hue-color), 28%, 8%);
     --container-color: hsl(var(--hue-color), 29%, 16%);
     --scroll-bar-color: hsl(var(--hue-color), 12%, 48%);
     --scroll-thumb-color: hsl(var(--hue-color), 12%, 36%);
@@ -499,7 +499,7 @@ img{
 
 .skills__bar,
 .skills__percentage{
-    height: 5px;
+    height: 10px;
     border-radius: .25rem;
 }
 
@@ -513,63 +513,51 @@ img{
 }
 
 .skills__python{
-    width: 95%;
+    width: 60%;
 }
 
 .skills__java{
     width: 40%;
 }
 
-.skills__r{
-    width: 90%;
+.skills__git{
+    width: 70%;
 }
 
-.skills__cplusplus{
-    width: 75%;
+.skills__github{
+    width: 50%;
 }
 
-.skills__c{
-    width: 65%;
+.skills__vscode{
+    width: 80%;
 }
 
-.skills__docker{
-    width: 85%;
-}
-
-.skills__kubernetes{
+.skills__terminal{
     width: 30%;
 }
 
-.skills__git{
-    width: 90%;
+.skills__htmlcss{
+    width: 40%;
 }
 
-.skills__reactnative{
-    width: 80%;
+.skills__ds{
+    width: 30%;
 }
 
-.skills__bash{
-    width: 85%;
+.skills__cf{
+    width: 50%;
 }
 
-.skills__bootstrap{
-    width: 80%;
+.skills__fmc{
+    width: 60%;
 }
 
-.skills__mysql{
-    width: 70%;
+.skills__fileio{
+    width: 40%;
 }
 
-.skills__mongo{
-    width: 80%;
-}
-
-.skills__postgresql{
-    width: 70%;
-}
-
-.skills__mssqlserver{
-    width: 85%;
+.skills__template{
+    width: 0%;
 }
 
 .skills__close .skills__list{
