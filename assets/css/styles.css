@@ -22,7 +22,6 @@
     --container-color: #FFF;
     --scroll-bar-color: hsl(var(--hue-color), 12%, 90%);
     --scroll-thumb-color: hsl(var(--hue-color), 12%, 80%);
-    --scrollup-color:hsl(var(--hue-color), 89%, 60%);
 
     /*========== Font and typography ==========*/
     --body-font: 'Poppins', sans-serif;
@@ -81,7 +80,6 @@ body.dark-theme{
     --container-color: hsl(var(--hue-color), 29%, 16%);
     --scroll-bar-color: hsl(var(--hue-color), 12%, 48%);
     --scroll-thumb-color: hsl(var(--hue-color), 12%, 36%);
-    --scrollup-color: white
 }
 
 /*========== Button Dark/Light ==========*/
@@ -373,7 +371,13 @@ img{
 .button__icon{
     font-size: 1.25rem;
     margin-left: var(--mb-0-5);
-    transition: .3s;
+    transition: 0.3s;
+}
+
+.button__icon-contact{
+    font-size: 1rem;
+    margin-left: var(--mb-0-25);
+    transition: 0.3s;
 }
 
 .button--white{
@@ -459,7 +463,7 @@ img{
 
 .skills__icon,
 .skills__arrow{
-    font-size: 2rem;
+    font-size: 1.8rem;
     color: var(--first-color);
 }
 
@@ -478,7 +482,7 @@ img{
 
 .skills__arrow{
     margin-left: auto;
-    transition: .4s;
+    transition: 0.2s;
 }
 
 .skills__list{
@@ -592,7 +596,7 @@ img{
 }
 
 .qualification__icon{
-    font-size: 1.8rem;
+    font-size: 2rem;
     margin-right: var(--mb-0-25);
 }
 
@@ -711,7 +715,7 @@ img{
     z-index: var(--z-modal);
     opacity: 0;
     visibility: hidden;
-    transition: .3s;
+    transition: .2s;
 }
 
 .Expertise__modal-content{
@@ -867,10 +871,15 @@ img{
     margin-bottom: var(--mb-2);
 }
 
-.contact__icon{
-    font-size: 2rem;
+.contact__icon,
+.contact__social-icon{
+    font-size: 1.8rem;
     color: var(--first-color);
     margin-right: var(--mb-0-75);
+}
+
+.contact__social-icon:hover{
+    color: var(--first-color-alt);
 }
 
 .contact__title{
@@ -1030,36 +1039,6 @@ img{
     color: #FFF;
 }
 
-/*========== SCROLL UP ==========*/
-.scrollup{
-    position: fixed;
-    right: 1rem;
-    bottom: 5rem;
-    background-color: var(--scrollup-color);
-    opacity: .8;
-    padding: 0 .3rem;
-    border-radius: .4rem;
-    z-index: var(--z-tooltip);
-    transition: .4s;
-}
-
-.scrollup:hover{
-    background-color: var(--first-color-alt);
-}
-
-.scrollup__icon{
-    font-size: 1.5rem;
-    color: #FFF;
-}
-/* Show scroll */
-.show-scroll{
-    bottom: 5rem;
-}
-
-.scrollup--footer{
-    background-color: white; /* which background color when scrollup reaches the footer */
-}
-
 /*========== SCROLL BAR ==========*/
 ::-webkit-scrollbar{
     width: .60rem;
@@ -1071,6 +1050,7 @@ img{
     background-color: var(--scroll-thumb-color);
     border-radius: .5rem;
 }
+
 /*==================== MEDIA QUERIES ====================*/
 /* For small devices */
 @media screen and (max-width: 350px){
