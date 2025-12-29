@@ -622,12 +622,20 @@ img{
     color: var(--text-color-light);
 }
 
-.qualification__rounder{
+.qualification__rounder,
+.qualification__rounder--incomplete{
     display: inline-block;
     width: 13px;
     height: 13px;
     background-color: var(--first-color);
     border-radius: 50%;
+    position: relative;
+    z-index: 2;
+}
+
+.qualification__rounder--incomplete{
+    border: 3.5px solid var(--first-color);
+    background-color: var(--container-color);
 }
 
 .qualification__line{
@@ -636,6 +644,8 @@ img{
     height: 100%;
     background-color: var(--first-color);
     transform: translate(6px, -7px);
+    position: relative;
+    z-index: 1;
 }
 
 .qualification [data-content]{
