@@ -91,6 +91,26 @@ modalCloses.forEach(modalClose => {
     });
 });
 
+/*==================== EXPERTISE SWIPER ====================*/
+let swiperExpertise = new Swiper(".Expertise__container", {
+    cssmode: true,
+    grapCursor: true,
+    spaceBetween: 24,
+  
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+      dynamicBullets: true,
+    },
+    breakpoints: {
+      0: {
+        slidesPerView: 2,
+      },
+      1024: {
+        slidesPerView: 3,
+      },
+    },
+  });
 /*==================== PORTFOLIO SWIPER  ====================*/
 let swiper = new Swiper(".portfolio__container", {
     cssMode: true,
