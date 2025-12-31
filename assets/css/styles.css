@@ -775,6 +775,7 @@ img{
 /*==================== PORTFOLIO ====================*/
 .portfolio__container{
     overflow: initial;
+    padding-bottom: 2.5rem;
 }
 
 .portfolio__content{
@@ -828,11 +829,6 @@ img{
     height: 15px;
     width: 15px;
     background-color: var(--first-color);
-}
-
-.swiper-pagination-portfolio {
-    height: 1px; 
-    margin-top: -2px ;
 }
 
 .swiper-button-prev,
@@ -996,7 +992,9 @@ img{
 .articles__icon-star {
   color: var(--first-color);
 }
-.swiper-container .swiper-pagination-expertise {
+.swiper-container, 
+.swiper-pagination-expertise, 
+.swiper-pagination-portfolio {
   bottom: 0;
 }
 

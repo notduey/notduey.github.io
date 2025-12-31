@@ -93,10 +93,8 @@ modalCloses.forEach(modalClose => {
 
 /*==================== EXPERTISE SWIPER ====================*/
 let swiperExpertise = new Swiper(".Expertise__container", {
-    cssmode: true,
-    grapCursor: true,
+    cssMode: true,
     spaceBetween: 24,
-  
     pagination: {
       el: ".swiper-pagination",
       clickable: true,
@@ -119,9 +117,15 @@ let swiper = new Swiper(".portfolio__container", {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
     },
+    autoplay: {
+        delay: 5000,
+        disableOnInteraction: false,
+        pauseonMouseEnter: true,
+    },
     pagination: {
         el: ".swiper-pagination",
         clickable: true,
+        dynamicBullets: true,
     },
 });
 /*==================== ARTICLES ====================*/
