@@ -188,7 +188,6 @@ function scrollHeader(){
 }
 window.addEventListener('scroll', scrollHeader);
 
-
 /*==================== SHOW SCROLL UP ====================*/
 function scrollUp(){
     const scrollUp = document.getElementById('scroll-up');
@@ -227,22 +226,105 @@ themeButton.addEventListener('click', () => {
     localStorage.setItem('selected-icon', getCurrentIcon())
 })
 
-// Google recaptcha
-window.onload = function() { 
-    var el = document.getElementById('g-recaptcha-response'); 
-    if (el) { 
-      el.setAttribute('required', 'required'); 
-    } 
-  }
 
-// validate all field in the contact form
-document.getElementById("check").onclick = function() {
-    let allAreFilled = true;
-    document.getElementById("submit_form").querySelectorAll("[required]").forEach(function(i) {
-      if (!allAreFilled) return;
-      if (!i.value) { allAreFilled = false;  return; }
-    })
-    if (!allAreFilled) {
-      alert('Fill all the fields');
+//CHATGPT HELPED A BUNCH WITH THIS BOTTOM SECTION (BUT I ALSO UNDERSTOOD AND WROTE MOST OF IT)
+// When the user clicks "Send", the form submits data to the server in the background
+// (AJAX) so the page does NOT refresh or redirect to new page.
+
+// ===================== DOCUMENT OBJECT MODEL (DOM) ELEMENTS =====================
+// Get the contact form from the HTML
+const form = document.getElementById("submit_form"); // Looks for: <form id="submit_form">
+
+// Element where we show status messages
+const statusEl = document.getElementById("form-status"); // Example: <p id="form-status"></p>
+
+// Button
+const submitBtn = document.getElementById("check"); // Example: <button type="submit" id="check">
+
+// inputs
+const nameInput = document.getElementById("name"); // Example: <input type="text" id="name">
+const emailInput = document.getElementById("email"); // Example: <input type="email" id="email">
+const subjectInput = document.getElementById("subject"); // Example: <input type="text" id="subject">
+const messageInput = document.getElementById("message"); // Example: <textarea id="message"></textarea>
+
+// ===================== FORM SUBMIT LOGIC =====================
+// Only run this code if the form exists on the page
+if (form) { // prevents JS errors if this script runs on a page without the form
+
+  // This runs when the user clicks "Send" or presses Enter
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault(); // Prevent the browser’s default form behavior (no page refresh, no redirect)
+
+    // ===================== INPUT VALIDATION =====================
+    function validateInputs(fields) { // checks if input fields are empty
+      for (const field of fields) {
+        if (!field.el.value.trim()) {
+          statusEl.textContent = `Please enter a${field.input}.`;
+          field.el.focus();
+          return false;
+        }
+      }
+      return true;
     }
-  };
+
+    const info = [
+      { el: nameInput, input: " name" },
+      { el: emailInput, input: "n email address" },
+    ];
+    const body = [
+      { el: subjectInput, input: " subject" },
+      { el: messageInput, input: " message" },
+    ];
+
+    if (!validateInputs(info)) return; // checks if name and email fields are empty
+
+    const email = emailInput.value.trim(); // remove whitespace
+    const hasAt = email.includes("@"); //false if there's no "@" in email
+    const hasDotAfterAt = email.split("@")[1]?.includes("."); //false if there's no "." after the "@"
+    // email = "example@email.com"
+    // email.split("@") = ["example", "email.com"]
+    // email.split("@")[1] = "email.com"
+    // ?. is optional chaining, meaning if [1] exists, check if it includes a "."
+    const hasTextBeforeAt = email.split("@")[0].length > 0; //false if there's no text before the "@"
+
+    if (!hasAt || !hasDotAfterAt || !hasTextBeforeAt) { // checks if any of the conditions are false
+        statusEl.textContent = "Please enter a valid email address.";
+        emailInput.focus();
+        return;
+    }
+
+    if (!validateInputs(body)) return; // checks if subject and message fields are empty
+
+    // ===================== SUBMIT FORM =====================
+    submitBtn.disabled = true; // Disables button to prevent multiple submissions
+    statusEl.textContent = "Sending..."; // Shows a loading message
+
+    try {
+      // Create a FormData object from the form, automatically gathers all inputs with name="..."
+      const formData = new FormData(form);
+
+      // Send the form data to the URL in form.action using fetch (AJAX)
+      const res = await fetch(form.action, {
+        method: "POST", // send data to the server
+        body: formData, // form values (name, email, message, etc.)
+        headers: {
+            Accept: "application/json", // ask the server for a JSON response
+        },
+      });
+
+      if (res.ok) { // if the server responded with a success status
+        statusEl.textContent = "Thanks! Your message has been sent."; // success message
+        form.reset(); // clear all form fields
+      } 
+      else { // server responded but with an error status
+        statusEl.textContent = "Error sending message. Please try again.";
+      }
+    }
+    catch { // Runs if: network fails, user is offline, or fetch throws an error
+      statusEl.textContent = "Network error. Please try again.";
+    }
+    finally {
+      submitBtn.disabled = false; // Re-enable the button
+    }
+  });
+}

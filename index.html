@@ -18,7 +18,6 @@
     <meta name="author" content="Duy Tran">
     <meta name="robots" content="index, follow">
     <meta name="google-site-verification" content="KYe6GsSYjjdW_70JlJh1PmUMcjtCYCgVxAILWMEkWSw" />
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 
 <body>
@@ -938,7 +937,10 @@
                     </div>
                     
                     <!--==================== CONTACT FORM ====================-->
-                    <form action="https://formsubmit.co/136ae2dcdcbea4f74bd42de8b768a546" method="POST" class="contact__form grid" id="submit_form">
+                    <form action="https://api.web3forms.com/submit" method="POST" class="contact__form grid" id="submit_form" novalidate>
+
+                        <input type="hidden" name="access_key" value="03bc2d8b-2f2e-4176-a608-2b33b2e9c01a">
+
                         <div class="contact__inputs grid">
                             <div class="contact__content">
                                 <label for="name" class="contact__label">Name</label>
@@ -952,23 +954,26 @@
                         </div>
 
                         <div class="contact__content">
-                            <label for="project-contact" class="contact__label">Subject</label>
-                            <input type="text" id="project-contact" name="project" class="contact__input" required>
+                            <label for="subject" class="contact__label">Subject</label>
+                            <input type="text" id="subject" name="subject" class="contact__input" required>
                         </div>
 
                         <div class="contact__content">
                             <label for="message-contact" class="contact__label">Message</label>
-                            <textarea name="message" cols="0" rows="7" id="message-contact"
+                            <textarea name="message" cols="0" rows="7" id="message"
                                 class="contact__input" required></textarea>
                         </div>
 
                         <div style="text-align: center;">
-                            <button class="button button--flex" id="check">
+                            <button type="submit" class="button button--flex" id="check">
                                 Send Message
                                 <i class="fa-solid fa-paper-plane fa-rotate-by button__icon-contact"
                                 style="--fa-rotate-angle: 45deg;"></i>
                             </button>
+
+                            <p id="form-status" aria-live="polite"></p>
                         </div>
+
                     </form>
                 </div>
             </div>
