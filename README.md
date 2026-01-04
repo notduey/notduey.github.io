@@ -1,5 +1,5 @@
 # Personal Portfolio Website - Duy Tran
-A responsive, modern personal portfolio built with HTML/CSS/JavaScript to showcase projects, skills, and experience in a clean, friendly format.
+A responsive and fun personal portfolio built with HTML/CSS/JavaScript to showcase projects, skills, and experience in a clean, friendly format.  
 **Website:** [notduey.github.io](https://notduey.github.io)
 
 ## Overview
@@ -18,14 +18,14 @@ It focuses on modern design, responsive navigation, UI state management, DOM man
 - Contact form with validation and async submission
 - Consistent layout, spacing, and typography using CSS variables
 
-## Installing/Locally Hosting the Portfolio
+## Installing/deploying the Portfolio
 **1. Clone the repository:**  
 
-*SSH*
+SSH
 ```bash
 git clone git@github.com:notduey/notduey.github.io.git
 ```
-*HTTPS*
+HTTPS
 ```bash
 https://github.com/notduey/notduey.github.io.git
 ```
@@ -35,11 +35,11 @@ cd.../.../notduey.github.io
 ```
 **3. Open the index file on your browser:**  
 
-*Windows*
+Windows
 ```bash
 start index.html
 ```
-*MacOs*
+MacOs
 ```bash
 open index.html
 ```
