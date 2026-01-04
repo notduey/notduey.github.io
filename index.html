@@ -17,7 +17,6 @@
     <title>Duy Tran - Portfolio</title>
     <meta name="author" content="Duy Tran">
     <meta name="robots" content="index, follow">
-    <meta name="google-site-verification" content="KYe6GsSYjjdW_70JlJh1PmUMcjtCYCgVxAILWMEkWSw" />
 </head>
 
 <body>
@@ -38,6 +37,11 @@
                         </a>
                     </li>
                     <li class="nav__item">
+                        <a href="#portfolio" class="nav__link">
+                            <i class="fa-regular fa-folder-open nav__icon"></i> Portfolio
+                        </a>
+                    </li>
+                    <li class="nav__item">
                         <a href="#skills" class="nav__link">
                             <i class="fa-solid fa-list-check nav__icon"></i> Skills
                         </a>
@@ -52,18 +56,6 @@
                             <i class="fa-regular fa-star nav__icon"></i> Expertise
                         </a>
                     </li>
-                    <li class="nav__item">
-                        <a href="#portfolio" class="nav__link">
-                            <i class="fa-regular fa-folder-open nav__icon"></i> Portfolio
-                        </a>
-                    </li>
-                    <!--==================== NOT IN USE ====================--
-                    <li class="nav__item">
-                        <a href="#articles" class="nav__link">
-                            <i class="fa-regular fa-newspaper nav__icon"></i> Articles
-                        </a>
-                    </li>
-                    --==================== ABOVE NOT IN USE ====================-->
                     <li class="nav__item">
                         <a href="#contact" class="nav__link">
                             <i class="fa-regular fa-comment-dots nav__icon"></i> Contact Me
@@ -189,14 +181,82 @@
                             <span class="about__info-name">Projects <br> Made </span>
                         </div>
                     </div>
+
                     <div class="about__buttons">
                         <a download="" href="assets/pdf/DT_resume.pdf" class="button button--flex">
                             Download Resume <i class="uil uil-import button__icon-download"></i>
                         </a>
                     </div>
+
                 </div>
             </div>
 
+        </section>
+
+        <!--==================== PORTFOLIO ====================-->
+        <section class="portfolio section" id="portfolio">
+            <h2 class="section__title">Portfolio (WORK IN PROGRESS)</h2>
+            <span class="section__subtitle">My Personal Projects</span>
+
+            <div class="portfolio__container container swiper-container">
+                <div class="swiper-wrapper">
+
+                    <!--======================== PORTFOLIO 1 =============-->
+                    <div class="portfolio__content grid swiper-slide">
+                        <img src="assets/img/calc_demo.gif" alt="" class="portfolio__img" loading="lazy">
+
+                        <div class="portfolio__data">
+                            <h3 class="portfolio__title">Apple-Style Calculator (Java)</h3>
+                            <p class="portfolio__description">
+                                My first coding project! It's a Java Swing calculator app inspired by Apple's calculator, with a modern UI, custom styling, and button-based input handling.
+                            </p>
+                            <a href="https://github.com/notduey/CalculatorApp"
+                                class="button button--flex button--small portfolio__button" target="_blank">
+                                View
+                                <i class="fa-solid fa-arrow-right-to-bracket button__icon-portfolio"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!--======================== PORTFOLIO 2 =============-->
+                    <div class="portfolio__content grid swiper-slide">
+                        <img src="assets/img/WIP.jpeg" alt="" class="portfolio__img" loading="lazy">
+
+                        <div class="portfolio__data">
+                            <h3 class="portfolio__title">Scholarship Tracker</h3>
+                            <p class="portfolio__description">
+                                More details coming soon...
+                            </p>
+                            <a href="https://ADDTHELINKDUY.com"" class="button button--flex button--small portfolio__button" target="_blank">
+                                View
+                                <i class="fa-solid fa-arrow-right-to-bracket button__icon-portfolio"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!--======================== PORTFOLIO 3 =============-->
+                    <div class="portfolio__content grid swiper-slide">
+                        <img src="assets/img/lexus.webp" alt="" class="portfolio__img" loading="lazy">
+
+                        <div class="portfolio__data">
+                            <h3 class="portfolio__title">More Projects Coming Soon</h3>
+                            <p class="portfolio__description">
+                                I'll be updating this section with more projects as I make them. Here's a cool picture of my car, a 2013 Lexus IS350 instead!
+
+                            </p>
+                            <a href="https://www.google.com/search?q=2nd+Generation+IS350+AWD" 
+                            class="button button--flex button--small portfolio__button" target="_blank">
+                                View
+                                <i class="fa-solid fa-arrow-right-to-bracket button__icon-portfolio"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            
+                <!--============ Add Pagination =============-->
+                <div class="swiper-pagination swiper-pagination-portfolio"></div>
+            </div>
         </section>
 
         <!--==================== SKILLS ====================-->
@@ -737,169 +797,6 @@
 
         </section>
 
-        <!--==================== PORTFOLIO ====================-->
-        <section class="portfolio section" id="portfolio">
-            <h2 class="section__title">Portfolio (WORK IN PROGRESS)</h2>
-            <span class="section__subtitle">My Personal Projects</span>
-
-            <div class="portfolio__container container swiper-container">
-                <div class="swiper-wrapper">
-
-                    <!--======================== PORTFOLIO 1 =============-->
-                    <div class="portfolio__content grid swiper-slide">
-                        <img src="assets/img/calc_demo.gif" alt="" class="portfolio__img" loading="lazy">
-
-                        <div class="portfolio__data">
-                            <h3 class="portfolio__title">Apple-Style Calculator (Java)</h3>
-                            <p class="portfolio__description">
-                                My first coding project! It's a Java Swing calculator app inspired by Apple's calculator, with a modern UI, custom styling, and button-based input handling.
-                            </p>
-                            <a href="https://github.com/notduey/CalculatorApp"
-                                class="button button--flex button--small portfolio__button">
-                                View
-                                <i class="fa-solid fa-arrow-right-to-bracket button__icon-portfolio"></i>
-                            </a>
-                        </div>
-                    </div>
-
-                    <!--======================== PORTFOLIO 2 =============-->
-                    <div class="portfolio__content grid swiper-slide">
-                        <img src="assets/img/WIP.jpeg" alt="" class="portfolio__img" loading="lazy">
-
-                        <div class="portfolio__data">
-                            <h3 class="portfolio__title">Scholarship Tracker</h3>
-                            <p class="portfolio__description">
-                                More details coming soon...
-                            </p>
-                            <a href="https://ADDTHELINKDUY.com"" class="button button--flex button--small portfolio__button">
-                                View
-                                <i class="fa-solid fa-arrow-right-to-bracket button__icon-portfolio"></i>
-                            </a>
-                        </div>
-                    </div>
-
-                    <!--======================== PORTFOLIO 3 =============-->
-                    <div class="portfolio__content grid swiper-slide">
-                        <img src="assets/img/lexus.webp" alt="" class="portfolio__img" loading="lazy">
-
-                        <div class="portfolio__data">
-                            <h3 class="portfolio__title">More Projects Coming Soon</h3>
-                            <p class="portfolio__description">
-                                I'll be updating this section with more projects as I make them. Here's a cool picture of my car, a 2013 Lexus IS350 instead!
-
-                            </p>
-                            <a href="https://www.google.com/search?q=2nd+generation+is350+awd&sca_esv=e2009bab7b33a1c7&sxsrf=AE3TifNcBFoDjZ-75l_1eCkPFkcWif9Z3g%3A1767338489348&ei=-XFXadj_FNm_0PEPt_CfqAE&ved=0ahUKEwiY4Ov2qOyRAxXZHzQIHTf4BxUQ4dUDCBE&uact=5&oq=2nd+generation+is350+awd&gs_lp=Egxnd3Mtd2l6LXNlcnAiGDJuZCBnZW5lcmF0aW9uIGlzMzUwIGF3ZDIIECEYoAEYwwRIhg1QAFjkCnAAeAGQAQCYAVKgAbwHqgECMTS4AQPIAQD4AQGYAgugAqsGwgIGEAAYBxgewgILEAAYgAQYhgMYigXCAggQABiABBiiBMICBRAAGO8FwgIHECMYsAIYJ8ICCBAAGAcYCBgewgIKECEYoAEYwwQYCpgDAJIHAjExoAfhUbIHAjExuAerBsIHBTAuNy40yAckgAgA&sclient=gws-wiz-serp" class="button button--flex button--small portfolio__button">
-                                View
-                                <i class="fa-solid fa-arrow-right-to-bracket button__icon-portfolio"></i>
-                            </a>
-                        </div>
-                    </div>
-
-                </div>
-            
-                <!--============ Add Pagination =============-->
-                <div class="swiper-pagination swiper-pagination-portfolio"></div>
-            </div>
-        </section>
-
-        <!--==================== ARTICLES ====================--
-        <section class="articles section" id="articles">
-                <h2 class="section__title">Medium Articles (DECIDE ON REMOVING OR EDITING THIS SECTION)</h2>
-                <span class="section__subtitle">See some of my published articles</span>
-                <div class="articles__container container swiper-container">
-                    <div class="swiper-wrapper">
-                    <!--==================== ARTICLE 1 ====================--
-                    <div class="articles__content swiper-slide">
-                        <div class="card">
-                        <a href="https://medium.com/gitconnected/a-developers-guide-to-working-with-apis-d5c8aa4e0284">
-                            <h4>🛠️ A Developer's Guide to Working with APIs</h4>
-                            <p class="journal">Published on Level Up Coding</p>
-                            <p>Master using APIs in Python! Learn why APIs are crucial, how to use them, and the
-                                differences between REST and GraphQL.</p>
-                        </a>
-                        </div>
-                    </div>
-                <!--==================== ARTICLE 2 ====================--
-                <div class="articles__content swiper-slide">
-                    <div class="card">
-                        <a href="https://medium.com/python-in-plain-english/python-the-glittering-jewel-of-modern-technology-972976c130f4">
-                            <h4>🐍 Python: The Glittering Jewel of Modern Technology</h4>
-                            <p class="journal">Published on Python in Plain English</p>
-                            <p>Uncover the transformative role of Python, the versatile jewel of modern technology, driving innovation across AI, ML and web development.</p>
-                        </a>
-                    </div>
-                </div>
-                <!--==================== ARTICLE 3 ====================--
-                <div class="articles__content swiper-slide">
-                    <div class="card">
-                        <a href="https://medium.com/gitconnected/secrets-to-a-killer-data-science-portfolio-projects-that-will-skyrocket-your-career-67089b924929">
-                            <h4>🚀 Secrets to a Killer Data Science Portfolio: Projects that Will Skyrocket Your Career
-                            </h4>
-                            <p class="journal">Published on Level Up Coding</p>
-                            <p>Unlock the secrets to a powerful data science portfolio that propels your career to new
-                                heights.</p>
-                        </a>
-                    </div>
-                </div>
-                <!--==================== ARTICLE 4 ====================--
-                <div class="articles__content swiper-slide">
-                    <div class="card">
-                        <a href="https://medium.com/gitconnected/building-a-deep-learning-model-with-tensorflow-and-keras-easier-than-you-think-62d0cb7945ff">
-                            <h4>🧠 Building a Deep Learning Model with TensorFlow and Keras: Easier Than You Think</h4>
-                            <p class="journal">Published on Level Up Coding</p>
-                            <p>Master the art of Deep Learning with TensorFlow and Keras. A step-by-step guide to your
-                                first model.</p>
-                        </a>
-                    </div>
-                </div>
-                <!--==================== ARTICLE 5 ====================--
-                <div class="articles__content swiper-slide">
-                    <div class="card">
-                        <a href="https://medium.com/mlearning-ai/creating-a-chatbot-with-python-5598e9a5f993">
-                            <h4>💬 Creating a Chatbot with Python</h4>
-                            <p class="journal">Published on MLearning.ai</p>
-                            <p>Learn how to create a simple chatbot using Python and NLP techniques. Create an
-                                intelligent conversational agent.</p>
-                        </a>
-                    </div>
-                </div>
-                <!--==================== ARTICLE 6 ====================--
-                <div class="articles__content swiper-slide">
-                    <div class="card">
-                        <a href="https://medium.com/gitconnected/design-patterns-in-python-a-practical-guide-to-writing-maintainable-code-a3f780a4a6ad">
-                            <h4>📝 Design Patterns in Python: A Practical Guide to Writing Maintainable Code</h4>
-                            <p class="journal">Published on Level Up Coding</p>
-                            <p>Discover essential design patterns in Python for writing maintainable code, for beginner and experienced Python developer.</p>
-                        </a>
-                    </div>
-                </div>
-            </div>
-                <!-- Add Pagination --
-                <div class="swiper-pagination swiper-pagination-articles"></div>
-            </div>
-        </section>
-
-        <!--==================== PROJECT IN MIND ====================--
-        <section class="project section">
-            <div class="project__bg">
-                <div class="project__container container grid">
-                    <div class="project__data">
-                        <h2 class="project__title">> Would you like to get to know me better?
-                            <br>
-                            > You want to collaborate with me?</h2>
-                        <p class="project__description">Contact me below!</p>
-                        <div class="centered-container">
-                        <a href="#contact" class="button button--flex button--white">
-                            Contact Me
-                            <i class="fa-solid fa-angles-down project__icon button__icon-contact button__contact"></i>
-                        </a>
-                    </div>
-                    </div>
-                </div>
-            </div>
-</div>
-        </section>
-
         <!--==================== CONTACT ME ====================-->
         <section class="contact section" id="contact">
             <h2 class="section__title">Contact Me</h2>
@@ -909,7 +806,7 @@
                 <div>
                     <div class="contact__information">
                         <a href="https://linkedin.com/in/duyt/" target="_blank">
-                            <i class="fa-brands fa-square-linkedin contact__social-icon"></i>
+                            <i class="fa-brands fa-square-linkedin contact__icon"></i>
                         </a>
 
                         <div>
@@ -919,17 +816,18 @@
                     </div>
 
                     <div class="contact__information">
-                        <i class="fa-solid fa-envelope contact__icon"></i>
+                        <i class="fa-solid fa-envelope contact__icon" id="copy-email-icon"></i>
 
                         <div>
                             <h3 class="contact__title">Email</h3>
-                            <span class="contact__subtitle">duy.tran.main@gmail.com</span>
+                            <span class="contact__subtitle" id="copy-email">duy.tran.main@gmail.com</span>
                         </div>
                     </div>
 
                     <div class="contact__information">
-                        <i class="fa-solid fa-location-dot contact__icon"></i>
-
+                        <a href="https://www.google.com/search?q=Washington+State" target="_blank">
+                            <i class="fa-solid fa-location-dot contact__icon"></i>
+                        </a>
                         <div>
                             <h3 class="contact__title">Location</h3>
                             <span class="contact__subtitle">Washington, US</span>
@@ -960,12 +858,12 @@
 
                         <div class="contact__content">
                             <label for="message-contact" class="contact__label">Message</label>
-                            <textarea name="message" cols="0" rows="7" id="message"
+                            <textarea name="message" cols="0" rows="6" id="message"
                                 class="contact__input" required></textarea>
                         </div>
 
                         <div style="text-align: center;">
-                            <button type="submit" class="button button--flex" id="check">
+                            <button type="submit" class="button button--flex contact__button" id="check">
                                 Send Message
                                 <i class="fa-solid fa-paper-plane fa-rotate-by button__icon-contact"
                                 style="--fa-rotate-angle: 45deg;"></i>
@@ -996,11 +894,11 @@
                     </li>
 
                     <li>
-                        <a href="#qualifications" class="footer__link">Qualifications</a>
-                    </li>
-
-                    <li>
                         <a href="#portfolio" class="footer__link">Portfolio</a>
+                    </li>
+                    
+                    <li>
+                        <a href="#qualifications" class="footer__link">Qualifications</a>
                     </li>
                 </ul>
 

@@ -128,23 +128,6 @@ let swiper = new Swiper(".portfolio__container", {
         dynamicBullets: true,
     },
 });
-/*==================== ARTICLES ====================*/
-let swiperarticles = new Swiper(".articles__container", {
-    loop: true,
-    grapCursor: true,
-    spaceBetween: 40,
-  
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-      dynamicBullets: true,
-    },
-    breakpoints: {
-      568: {
-        slidesPerView: 2,
-      },
-    },
-  });
 /*==================== SCROLL SECTIONS ACTIVE LINK ====================*/
 const sections = document.querySelectorAll('section[id]')
 
@@ -226,12 +209,26 @@ themeButton.addEventListener('click', () => {
     localStorage.setItem('selected-icon', getCurrentIcon())
 })
 
+/*==================== COPY TO CLIPBOARD ====================*/
+const icon = document.getElementById("copy-email-icon");
+const email = document.getElementById("copy-email").textContent.trim();
 
+icon.addEventListener("click", async () => { // wait for icon to be clicked
+    await navigator.clipboard.writeText(email); // copy email to clipboard
+
+    icon.classList.replace("fa-envelope", "fa-envelope-circle-check") // change icon
+
+    setTimeout(() => {
+        icon.classList.replace("fa-envelope-circle-check", "fa-envelope"); // revert icon in 3 seconds
+    }, 3000);
+});
+
+/*===================== FORM SUBMIT/NO REDIRECT =====================*/
 //CHATGPT HELPED A BUNCH WITH THIS BOTTOM SECTION (BUT I ALSO UNDERSTOOD AND WROTE MOST OF IT)
 // When the user clicks "Send", the form submits data to the server in the background
 // (AJAX) so the page does NOT refresh or redirect to new page.
 
-// ===================== DOCUMENT OBJECT MODEL (DOM) ELEMENTS =====================
+/*===================== DOCUMENT OBJECT MODEL (DOM) ELEMENTS =====================*/
 // Get the contact form from the HTML
 const form = document.getElementById("submit_form"); // Looks for: <form id="submit_form">
 
@@ -247,7 +244,7 @@ const emailInput = document.getElementById("email"); // Example: <input type="em
 const subjectInput = document.getElementById("subject"); // Example: <input type="text" id="subject">
 const messageInput = document.getElementById("message"); // Example: <textarea id="message"></textarea>
 
-// ===================== FORM SUBMIT LOGIC =====================
+/*===================== FORM SUBMIT LOGIC =====================*/
 // Only run this code if the form exists on the page
 if (form) { // prevents JS errors if this script runs on a page without the form
 
@@ -255,7 +252,7 @@ if (form) { // prevents JS errors if this script runs on a page without the form
   form.addEventListener("submit", async (e) => {
     e.preventDefault(); // Prevent the browser’s default form behavior (no page refresh, no redirect)
 
-    // ===================== INPUT VALIDATION =====================
+    /*===================== INPUT VALIDATION =====================*/
     function validateInputs(fields) { // checks if input fields are empty
       for (const field of fields) {
         if (!field.el.value.trim()) {
@@ -295,7 +292,7 @@ if (form) { // prevents JS errors if this script runs on a page without the form
 
     if (!validateInputs(body)) return; // checks if subject and message fields are empty
 
-    // ===================== SUBMIT FORM =====================
+    /*===================== SUBMIT FORM =====================*/
     submitBtn.disabled = true; // Disables button to prevent multiple submissions
     statusEl.textContent = "Sending..."; // Shows a loading message
 

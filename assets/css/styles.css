@@ -7,7 +7,7 @@
 
     /*========== Colors ==========*/
     /* Change favorite color */
-    --hue-color: 270; /*Blue 224 - Green 142 - Purple 250 - Pink 340*/
+    --hue-color: 275; /*Blue 224 - Green 142 - Purple 250 - Pink 340*/
 
     /* HSL color mode */
     --first-color: hsl(var(--hue-color), 89%, 60%);
@@ -290,12 +290,14 @@ img{
 }
 
 .home__social-icon{
+    transition: 0.3s; 
     font-size: 2rem;
     color: var(--first-color);
 }
 
 .home__social-icon:hover{
-    color: var(--first-color-alt);
+    transform: scale(1.15);
+    transform-origin: bottom left;
 }
 
 .home__blob{
@@ -352,6 +354,7 @@ img{
 
 /*==================== BUTTONS ====================*/
 .button{
+    transition: .3s;
     display: inline-block;
     background-color: var(--first-color);
     color: #FFF;
@@ -366,12 +369,13 @@ img{
 
 .button__icon-download{
     font-size: 1.5rem;
+    line-height: 1rem;
     margin-left: var(--mb-0-5);
     transition: 0.3s;
 }
 
 .button__icon-expertise{
-    font-size: 1.25rem;
+    font-size: 1.15rem;
     margin-left: var(--mb-0-5);
     transition: 0.3s;
 }
@@ -502,7 +506,7 @@ img{
 
 .skills__arrow{
     margin-left: auto;
-    transition: 0.2s;
+    transition: 0.3s;
 }
 
 .skills__list{
@@ -746,7 +750,7 @@ img{
     z-index: var(--z-modal);
     opacity: 0;
     visibility: hidden;
-    transition: .2s;
+    transition: .3s;
 }
 
 .Expertise__modal-content{
@@ -813,10 +817,6 @@ img{
 
 .portfolio__description{
     margin-bottom: var(--mb-0-75);
-}
-
-.portfolio__button:hover .button__icon-portfolio{
-    transform: translateX(.25rem);
 }
 
 .swiper-button-prev::after,
@@ -897,18 +897,21 @@ img{
 
 .contact__information{
     display: flex;
-    margin-bottom: var(--mb-2);
+    margin-bottom: var(--mb-1-5);
 }
 
-.contact__icon,
-.contact__social-icon{
+.contact__icon{
+    transition: 0.3s; 
     font-size: 2rem;
     color: var(--first-color);
     margin-right: var(--mb-0-75);
 }
 
-.contact__social-icon:hover{
-    color: var(--first-color-alt);
+.contact__icon:hover{
+    cursor: pointer;
+    transition: .3s;
+    transform: scale(1.15);
+    transform-origin: bottom left;
 }
 
 .contact__title{
@@ -941,77 +944,15 @@ img{
     border: none;
     outline: none;
     padding: .25rem .5rem .5rem 0;
+    resize: none;
 }
 
-/*==================== ARTICLES ====================*/
-
-.card-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
-.card {
-    background-color: var(--container-color);
-    border-radius: 5px;
-    margin: 10px;
-    padding: 20px;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-}
-
-.card a {
-    text-decoration: none;
-    color: var(--text-color);
-}
-
-.card p, .card h3 {
-    margin: 0;
-    color: var(--text-color);
-}
-
-.card:hover{
-    box-shadow: 0 4px 8px rgba(0,0,0,.45);
-}
-
-.journal{
-    font-size: var(--smaller-font-size);
-    color: var(--first-color);
-    font-weight: var(--font-semi-bold);
-    font-style: italic;
-}
-
-.articles__data,
-.articles__header {
-  display: flex;
-}
-.articles__data {
-  justify-content: space-between;
-  margin-bottom: var(--mb-0-1);
-}
-.articles__img {
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  margin-right: var(--mb-0-75);
-}
-.articles__name {
-  font-size: var(--h2-font-size);
-  font-weight: var(--font-medium);
-}
-.articles__client {
-  font-size: var(--small-font-size);
-  color: var(--text-color-light);
-}
-.articles__description {
-  margin-bottom: var(--mb-2-5);
-}
-.articles__icon-star {
-  color: var(--first-color);
-}
-.swiper-container, 
-.swiper-pagination-expertise, 
-.swiper-pagination-portfolio {
-  bottom: 0;
+.contact__button{
+    font-size: var(--normal-font-size);
+    font-family: var(--body-font);
+    border: none;
+    outline: none;
+    cursor: pointer;
 }
 
 /*==================== FOOTER ====================*/
