@@ -152,7 +152,7 @@ img{
 .section__subtitle{
     display: block;
     font-size: var(--small-font-size);
-    margin-bottom: var(--mb-3);
+    margin-bottom: var(--mb-2);
 }
 
 .section__title,
@@ -1131,7 +1131,7 @@ img{
         padding: 6rem 0 2rem;
     }
     .section__subtitle{
-        margin-bottom: 4rem;
+        margin-bottom: 3rem;
     }
 
     .header{
