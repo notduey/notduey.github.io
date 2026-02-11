@@ -525,6 +525,10 @@ img{
     font-weight: var(--font-medium);
 }
 
+.skills__desc{
+    text-align: right;
+}
+
 .skills__bar,
 .skills__percentage{
     height: 10px;
@@ -541,11 +545,11 @@ img{
 }
 
 .skills__python{
-    width: 60%;
+    width: 40%;
 }
 
 .skills__java{
-    width: 40%;
+    width: 50%;
 }
 
 .skills__js{
@@ -553,7 +557,7 @@ img{
 }
 
 .skills__git{
-    width: 70%;
+    width: 60%;
 }
 
 .skills__github{
@@ -561,7 +565,7 @@ img{
 }
 
 .skills__vscode{
-    width: 80%;
+    width: 70%;
 }
 
 .skills__terminal{
@@ -572,15 +576,23 @@ img{
     width: 40%;
 }
 
-.skills__ds{
+.skills__pd {
+    width: 20%;
+}
+
+.skills__sklearn {
     width: 30%;
+}
+
+.skills__dsa{
+    width: 60%;
 }
 
 .skills__cf{
     width: 50%;
 }
 
-.skills__fmc{
+.skills__oop{
     width: 60%;
 }
 
