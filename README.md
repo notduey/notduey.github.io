@@ -27,7 +27,7 @@ git clone git@github.com:notduey/notduey.github.io.git
 ```
 HTTPS
 ```bash
-https://github.com/notduey/notduey.github.io.git
+git clone https://github.com/notduey/notduey.github.io.git
 ```
 **2. CD into the directory:**
 ```bash
